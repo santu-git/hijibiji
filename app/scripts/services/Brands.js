@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('angularPassportApp')
-  .factory('Blogs', function ($resource) {
-    return $resource('api/blogs/:blogId', {
+  .factory('Brands', function ($resource) {
+    return $resource('api/brands/:brandId', {
       blogId: '@_id'
     }, {
       update: {

@@ -1,49 +1,47 @@
 'use strict';
 
 angular.module('angularPassportApp')
-  .controller('BlogsCtrl', function ($scope, Blogs, $location, $routeParams, $rootScope) {
+  .controller('BrandsCtrl', function ($scope, Brands, $location, $routeParams, $rootScope) {
 
     $scope.create = function() {
-      var blog = new Blogs({
+      var brand = new Brands({
         title: this.title,
-        content: this.content
       });
-      blog.$save(function(response) {
-        $location.path("blogs/" + response._id);
+      brand.$save(function(response) {
+        $location.path("brands/" + response._id);
       });
 
       this.title = "";
-      this.content = "";
     };
 
-    $scope.remove = function(blog) {
-      blog.$remove();
+    $scope.remove = function(brand) {
+      brand.$remove();
 
-      for (var i in $scope.blogs) {
-        if ($scope.blogs[i] == blog) {
-          $scope.blogs.splice(i, 1);
+      for (var i in $scope.brands) {
+        if ($scope.brands[i] == brand) {
+          $scope.brands.splice(i, 1);
         }
       }
     };
 
     $scope.update = function() {
-      var blog = $scope.blog;
-      blog.$update(function() {
-        $location.path('blogs/' + blog._id);
+      var brand = $scope.brand;
+      brand.$update(function() {
+        $location.path('brands/' + blog._id);
       });
     };
 
     $scope.find = function() {
-      Blogs.query(function(blogs) {
-        $scope.blogs = blogs;
+      Brands.query(function(brands) {
+        $scope.brands = brands;
       });
     };
 
     $scope.findOne = function() {
-      Blogs.get({
-        blogId: $routeParams.blogId
-      }, function(blog) {
-        $scope.blog = blog;
+      Brands.get({
+        brandId: $routeParams.brandId
+      }, function(brand) {
+        $scope.brand = brand;
       });
     };
   });
