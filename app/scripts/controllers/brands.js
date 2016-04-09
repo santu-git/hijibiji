@@ -27,7 +27,7 @@ angular.module('angularPassportApp')
     $scope.update = function() {
       var brand = $scope.brand;
       brand.$update(function() {
-        $location.path('brands/' + blog._id);
+        $location.path('brands/' + brand._id);
       });
     };
 
@@ -38,10 +38,12 @@ angular.module('angularPassportApp')
     };
 
     $scope.findOne = function() {
+
       Brands.get({
         brandId: $routeParams.brandId
       }, function(brand) {
         $scope.brand = brand;
+        currentUser.active_brand = brandId
       });
     };
   });

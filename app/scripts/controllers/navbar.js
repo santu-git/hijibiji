@@ -7,10 +7,10 @@ angular.module('angularPassportApp')
       "link": "brands"
     }];
 
-    $scope.authMenu = [{
+    /*$scope.authMenu = [{
       "title": "Create New Brend",
       "link": "brands/create"
-    }];
+    }];*/
 
     $scope.logout = function() {
       Auth.logout(function(err) {

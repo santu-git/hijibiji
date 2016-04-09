@@ -16,7 +16,7 @@ angular.module('angularPassportApp', [
       })
       .when('/brands', {
         templateUrl: 'partials/brands/list.html',
-        controller: 'BrandCtrl'
+        controller: 'BrandsCtrl'
       })
       .when('/brands/create', {
         templateUrl: 'partials/brands/create.html',

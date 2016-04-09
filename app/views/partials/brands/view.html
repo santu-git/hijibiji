@@ -1,8 +1,8 @@
 <section ng-init="findOne()">
-    <h2>{{blog.title}} <a ng-show="currentUser._id == blog.creator._id" href="/blogs/{{blog._id}}/edit">edit</a></h2>
-    <p>{{blog.content}}</p>
+    <h2>{{brand.title}} <a ng-show="currentUser._id == brand.creator._id" href="/brands/{{brand._id}}/edit">edit</a></h2>
     <div>
-        <span class="badge badge-success">Posted {{blog.created | date:'medium'}}</span>
-        <div class="pull-right"><span class="badge badge-success">Posted by {{blog.creator.username}}</span></div>
+    {{req.user}}
+        <span class="badge badge-success">Posted {{brand.created | date:'medium'}}</span>
+        <div class="pull-right"><span class="badge badge-success">Posted by {{brand.creator.username}}</span></div>
     </div>
 </section>
