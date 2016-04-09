@@ -14,21 +14,21 @@ angular.module('angularPassportApp', [
         templateUrl: 'partials/main.html',
         controller: 'MainCtrl'
       })
-      .when('/blogs', {
-        templateUrl: 'partials/blogs/list.html',
-        controller: 'BlogsCtrl'
+      .when('/brands', {
+        templateUrl: 'partials/brands/list.html',
+        controller: 'BrandsCtrl'
       })
-      .when('/blogs/create', {
-        templateUrl: 'partials/blogs/create.html',
-        controller: 'BlogsCtrl'
+      .when('/brands/create', {
+        templateUrl: 'partials/brands/create.html',
+        controller: 'BrandsCtrl'
       })
-      .when('/blogs/:blogId/edit', {
-        templateUrl: 'partials/blogs/edit.html',
-        controller: 'BlogsCtrl'
+      .when('/brands/:brandId/edit', {
+        templateUrl: 'partials/brands/edit.html',
+        controller: 'BrandsCtrl'
       })
-      .when('/blogs/:blogId', {
-        templateUrl: 'partials/blogs/view.html',
-        controller: 'BlogsCtrl'
+      .when('/brands/:brandId', {
+        templateUrl: 'partials/brands/view.html',
+        controller: 'BrandsCtrl'
       })
       .when('/login', {
         templateUrl: 'partials/login.html',
